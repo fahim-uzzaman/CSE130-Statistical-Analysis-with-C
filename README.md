@@ -1,3 +1,4 @@
+
 ```markdown
 # CSE330-Statistical-Analysis-with-C
 
@@ -27,44 +28,49 @@ Since I couldn't use built-in statistics functions, I had to code the actual mat
 Here is what I implemented:
 
 ### 1. Mean (Average)
-Just the sum of all values divided by the total number of items (\(N\)).
-\[
- \bar{x} = \frac{\sum x}{N} 
-\]
+Just the sum of all values divided by the total number of items (N).
+
+$$
+\bar{x} = \frac{\sum x}{N}
+$$
 
 ### 2. Standard Deviation & Variance
 I used the population formula to find out how spread out the data is. Variance is just the standard deviation squared.
-\[
- \sigma = \sqrt{\frac{\sum x^2}{N} - \bar{x}^2} 
-\]
-\[
- Variance (\sigma^2) = \frac{\sum x^2}{N} - \bar{x}^2 
-\]
+
+$$
+\sigma = \sqrt{\frac{\sum x^2}{N} - \bar{x}^2}
+$$
+
+$$
+Variance (\sigma^2) = \frac{\sum x^2}{N} - \bar{x}^2
+$$
 
 ### 3. Coefficient of Variation (CV)
 This is useful to see which variable has more variability (spread). It's just the standard deviation divided by the mean, turned into a percentage.
-\[
- CV = \left( \frac{\sigma}{\bar{x}} \right) \times 100 
-\]
 
-### 4. Pearson Correlation Coefficient (\(r\))
+$$
+CV = \left( \frac{\sigma}{\bar{x}} \right) \times 100
+$$
+
+### 4. Pearson Correlation Coefficient (r)
 This measures the strength of the relationship between two variables (like Income and Expenditure). I had to manually code this big formula into C:
-\[
- r = \frac{N(\sum xy) - (\sum x)(\sum y)}{\sqrt{[N\sum x^2 - (\sum x)^2] [N\sum y^2 - (\sum y)^2]}} 
-\]
 
-### 5. Simple Linear Regression (\(\hat{y} = \hat{\beta}_0 + \hat{\beta}_1x\))
-Once I found which variable correlates strongest with Income, I fit a regression line. 
+$$
+r = \frac{N(\sum xy) - (\sum x)(\sum y)}{\sqrt{[N\sum x^2 - (\sum x)^2] [N\sum y^2 - (\sum y)^2]}}
+$$
 
-**Slope (\(\hat{\beta}_1\)):**
-\[
- \hat{\beta}_1 = \frac{N(\sum xy) - (\sum x)(\sum y)}{N(\sum x^2) - (\sum x)^2} 
-\]
+### 5. Simple Linear Regression
+Once I found which variable correlates strongest with Income, I fit a regression line.
 
-**Intercept (\(\hat{\beta}_0\)):**
-\[
- \hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} 
-\]
+**Slope:**
+$$
+\hat{\beta}_1 = \frac{N(\sum xy) - (\sum x)(\sum y)}{N(\sum x^2) - (\sum x)^2}
+$$
+
+**Intercept:**
+$$
+\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}
+$$
 
 ---
 
