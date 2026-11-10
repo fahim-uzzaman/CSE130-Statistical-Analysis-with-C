@@ -1,10 +1,4 @@
-I know exactly why it looks worse. GitHub is incredibly picky about Markdown. When you have a list like `**Slope:**` right above `$$`, GitHub's parser sometimes thinks the math is part of the list and breaks it. 
 
-Also, I noticed in your screenshot that the text was cut off on the right side. This happens if there are no spaces around the math, or if it's mixed with plain text.
-
-The absolute safest way to write math on GitHub—so it **never** breaks—is to put the formula on a single line using single dollar signs `$ ... $`. It renders beautifully inline and GitHub never messes it up.
-
-Here is the 100% bulletproof version. Delete everything in your README and paste this exact block:
 
 ```markdown
 # CSE330-Statistical-Analysis-with-C
@@ -74,4 +68,4 @@ All the formulas and statistical interpretations I coded are based on:
     *   *Chapter 13 (Linear Correlation and Regression)*
 ```
 
-This uses inline double-dollar signs (`$$math$$`) directly on the same line as the text. It forces GitHub to center the math perfectly without breaking the list format. It will look clean and professional!
+
